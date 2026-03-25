@@ -2,9 +2,12 @@ from setuptools import  find_packages, setup
 from typing import List
 
 
+# 3
 # create a constant to prevent -e. from appearing..
 HYPHEN_E_DOT= '-e.'
 
+
+#3
 # function to download the libraries needed in requirements.txt
 def get_requirements(file_path:str)->List[str]:
     """
@@ -21,6 +24,8 @@ def get_requirements(file_path:str)->List[str]:
     
     return requirements
 
+
+# write this first
 setup(
     name='MLproject',
     version='0.0.1',
@@ -31,6 +36,4 @@ setup(
     # for automatic installation of the packages
     install_requires= get_requirements("requirements.txt")
     
-    
-    
-)
+) 
