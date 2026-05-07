@@ -1,6 +1,8 @@
 # check sys on google later...
 import sys
 
+# to make the display msg save
+from src.logger import logging
 
 def error_message_details(error, error_details:sys):
     _,_,exc_tb= error_detail.exc_info()
@@ -25,4 +27,7 @@ class CustomException(Exception):
     def __str__(self):
         return self.error_message  
     
+    
+    
+
     
