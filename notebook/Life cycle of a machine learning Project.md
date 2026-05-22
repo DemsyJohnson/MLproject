@@ -306,9 +306,9 @@ UNIVARIATE ANALYSIS ( How is Group wise distribute ?)
 
 
 
-Insights 
+Insights
 
-* Most of the student belonging from group C/ group D 
+* Most of the student belonging from group C/ group D
 * lowest number of students belong to group A
 
 
@@ -319,7 +319,7 @@ BIVARIATE ANALYSIS (Is Race/Ethnicity has any impact on student's performance ?)
 
 
 
-Insights 
+Insights
 
 * Group E students have scored the highest marks
 * Group A students have scored the lowest marks
@@ -348,7 +348,7 @@ UNIVARIATE ANALYSIS ( What is educational background of student's parent?)
 
 
 
-Insights 
+Insights
 
 * Largest number of parents are from some college
 
@@ -359,6 +359,16 @@ BIVARAIATE ANALYSIS (Is parental education has any impact on student's performan
 
 
 Insights
+
+
+
+
+
+
+
+
+
+08055574470
 
 
 
@@ -436,5 +446,5 @@ q
 
 
 
-&nbsp;
+ 
 

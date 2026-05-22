@@ -1,0 +1,11 @@
+Data Ingestion
+
+
+#Dataclass
+The dataclass is used to create class variables.
+
+
+Whenever we are performing data ingestion component, there should be some input that may be required by this data ingestion component. 
+input can be where I am going to save the training/test/raw data.
+These inputs will be created in another class called the data ingestion CLASS.
+-To use the class created by u will need a decorator
