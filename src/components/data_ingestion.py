@@ -2,7 +2,7 @@
 
 import os
 import sys
-from src.exception import CustomExceptions
+from src.exception import CustomException
 from src.logger import logging
 import pandas as pd
 from sklearn.model_selection import train_test_split
@@ -10,7 +10,6 @@ from sklearn.model_selection import train_test_split
 # To create class variables.
 from dataclasses import dataclass
 
- 
  
 @dataclass
  # class to save inputs
@@ -24,13 +23,35 @@ class DataIngestion:
     def __init__(self):
         self.ingestion_config=DataIngestionConfig()
        
-    
-    # create  my function  
+    #create my own function  
     def initiate_data_ingestion(self):
         logging.info("Enter the data ingestion or component")
         try:
-            pass
-        except:
-            pass
+            df=pd.read_csv('notebook/data/Stud.csv')
+            logging.info("read the dataset as dataframe")
+            
+            # create folders for training, test and raw data
+            os.makedirs(os.path.dirname(self.ingestion_config.train_data_path), exist_ok=True)
+            
+            df.to_csv(self.ingestion_config.raw_data_path, index=False, header=True)
+            
+            logging.info("Train test split initiated")
+            train_set, test_set = train_test_split(df, test_size=0.2, random_state=42)
+            train_set.to_csv(self.ingestion_config.train_data_path, index=False, header=True)
+            test_set.to_csv(self.ingestion_config.test_data_path, index=False, header=True)
+            
+            logging.info("Ingestion of the data is completed")
+            
+            return(
+                self.ingestion_config.train_data_path,
+                self.ingestion_config.test_data_path
+            )
+            
+             
+        except Exception as e:
+            raise CustomException(e, sys)
     
-
+# Initiate and run
+if __name__=="__main__":
+     obj=DataIngestion()
+     obj.initiate_data_ingestion()

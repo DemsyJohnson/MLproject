@@ -4,7 +4,7 @@ import sys
 # to make the display msg save
 from src.logger import logging
 
-def error_message_details(error, error_details:sys):
+def error_message_detail(error, error_detail:sys):
     _,_,exc_tb= error_detail.exc_info()
     
     # create a variable file name.....to get the file name
